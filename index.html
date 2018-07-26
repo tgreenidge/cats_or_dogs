@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Vote for cats or dogs</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <script src="index.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+    <div class="hero-image">
+      <div class="hero-text">
+        <h1>Let's settle this score once and for all</h1>
+        <p>What do you like more, cats or dogs?</p>
+        <button onclick="toggleVoteContainer()">Vote</button>
+      </div>
+    </div>
+
+    <div id="vote-container">
+      <div id="cats-container" class="voting">
+        <div class="carousel" id="cats-carousel" onclick="changeImage(this)">
+          <img src="https://images.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg" alt="cat image"/>
+        </div>
+
+        <div class="likes">
+            <i class="fas fa-heart" onclick="increaseLikes(this)"><span class="score">0</span></i> Likes
+        </div>
+      </div>
+
+      <div id="dogs-container" class="voting">
+        <div class="carousel" id="dogs-carousel" onclick="changeImage(this)">
+          <img src="https://www.mensjournal.com/wp-content/uploads/gettyimages-583596559-e274095b-2e49-481a-b1d1-de6bfee9e588.jpg" alt="dog image"/>
+        </div>
+
+        <div class="likes">
+            <i class="fas fa-heart" onclick="increaseLikes(this)"><span class="score">0</span></i> Likes
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
